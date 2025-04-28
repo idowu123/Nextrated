@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music Rating Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      padding: 20px;
+      background-image: url(trainer-bg.jpg);
+      background-size: cover;
+      background-position:center ;
+    }
+   
+    .download {
+      padding: 6px 12px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      text-decoration: none;
+    }
+ 
+ nav{
+    color:white; 
+    
+ }
+
+ li{
+    text-decoration: none;
+ }
+ ul{
+    text-decoration: none;
+
+ }
+nav  a{
+    color:gold;
+    text-decoration: none;
+    display:flex;
+    height: 50px;
+    padding: 0  30px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+ nav a:hover{
+color:#ffffff;
+ }
+ h1{
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color:white;
+    
+    animation:slideIntop;
+      animation-duration: 2s; 
+      animation-timing-function: ease-in-out;   
+      animation-delay: 0s;
+      animation-iteration-count: 1;
+        }
+ 
+ h2{
+  color:white;
+ }
+
+
+ 
+ .sky-d-p{
+    font-size: 18px;
+    animation:slideIntop;
+          animation-timeline:view();
+          animation-range:entry 0% cover 40%;
+        }
+ 
+nav ul{
+  list-style: none;
+  text-decoration: none;
+  display: contents;
+  align-items: right;
+  
+}
+nav li{
+  text-decoration: none;
+  margin-top: -15px;
+}
+.login{
+  margin-left: 250px;
+}
+
+p{
+  color:whitesmoke;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+select{
+  background-image: url(trainer-bg.jpg);
+  color:white;
+}
+select:hover{
+  background-color: black;
+}
+button{
+background-color: #3498db;
+color:white;
+border: none;
+border-radius: 5px;
+height: 30px;
+}
+.next-rated{
+    color:#f5f0f0;
+    font-size: 40px;
+    text-shadow:0 0 15px #000;
+    animation:slideInright;
+    animation-duration:1s;
+    animation-timing-function: ease-out;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight:800;
+    }
+button a{
+color:white;
+text-decoration: none;
+}
+button a:hover{
+  color:red;
+  
+}
+.dropdown {
+  float: left;
+  overflo: hidden;
+}
+.dropdown .dropbtn {
+  border: none;
+  color: gold;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  padding: 0  30px;
+  
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-image: url(trainer-bg.jpg);
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.8);
+  z-index: 1;
+}
+.dropdown-content a {
+  float: none;
+  color: whitesmoke;
+  padding: 7px 8px;
+  text-decoration: none;
+  display: flex;
+  text-align: left;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.dropdown-content a:hover{
+  background-color:rgb(8, 0, 7);
+  }
+.dropdown:hover .dropdown-content{
+  display:block
+}
+.artist-dashboard{
+  color:#f8f8f6a1;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  animation-name: bounce;
+  animation-duration:2s;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+.sky-d-img{
+    animation:slideIntop;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in;
+     padding-left: 70px;       
+    }
+
+@keyframes bounce{
+          0% {
+            transform: translateY(0);
+          }
+          20%{
+            transform:translateY(0);
+          }
+          40%{
+            transform:translateY(-30PX);
+          }
+          50%{
+            transform:translateY(0);
+          }
+          60%{
+            transform:translateY(-15px);
+          }
+          80%{
+            transform:translateY(0);
+          }
+          100%{
+            transform:translateY(0);
+          }
+        }
+
+        @keyframes slideInbottom{
+          from{
+          transform: translateY(-300px);
+          }
+          to{
+          transform:translatY(0);
+          }  
+        }
+
+        @keyframes appear{
+        from {
+          opacity:0;
+          transform:trsanslateX(-100px);
+        }
+        to{
+          opacity:1;
+          transform:translate(0px);
+        }
+      }
+
+      @keyframes slideInleft{
+          from{
+          transform: translateX(-300px);
+          }
+          to{
+          transform:translatX(0);
+          }  
+        } 
+        @keyframes slideInright{
+          from{
+          transform: translateX(300px);
+          }
+          to{
+          transform:translatX(0);
+          }  
+        }
+        @keyframes slideIntop{
+          from{
+          transform: translateY(300px);
+          }
+          to{
+          transform:translatY(0);
+          }  
+        }
+        @keyframes spin{
+          0%{
+         
+          }
+          100%{
+          transform:rotate(360deg);
+          border-radius: 50%;
+          }  
+        }
+      
+       
+
+:root {
+  --bg: #222;
+  --fg: #fff;
+}
+
+.light-mode {
+  --bg: #fff;
+  --fg: #000;
+}
+
+.player {
+  max-width: 400px;
+  margin: auto;
+  padding: 20px;
+  background: #444;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #000;
+}
+
+#playlist {
+  list-style: none;
+  padding: 0;
+}
+
+#playlist li {
+  cursor: pointer;
+  padding: 10px;
+  margin: 5px 0;
+  background: #666;
+  border-radius: 5px;
+}
+
+#playlist li:hover {
+  background: #888;
+}
+.tagline a{
+         color:rgba(255, 255, 255, 0.39);
+        }
+        .tagline a:hover{
+          color:aqua;
+          transform:scale(1.6);
+          transform:ease in out ease out;
+        }
+  </style>
+ 
+</head>
+<body>
+    <nav>
+      <p class="artist-dashboard">ARTIST DASHBOARD</p>
+      <div class="login"><a href="login.html">LOGIN</a></div>
+     <hr>
+        <ul>
+          <img src="home.png" width="20px">  <li><a href="nextrate2.html">Home </a></li>
+           
+           <img src="music-logo.png" width="18px">  <li><a href="music-playlist.html">MUSIC PLAYLIST </a></li>
+          
+            <img src="blog-icon.png" width="25px">  <li><a href="artistblog.html">ARTIST BLOG</a></li>    
+        
+             </ul>
+        </nav>
+        <p class="next-rated">NEXT RATED ARTIST</p>
+    <div class="sky-d-img"><img src="davido.png" width="200px" height="200px"></div>
+    <h1>Smith Nico</h1><br>
+  <p class="sky-d-p">Smith Nico, born and raise in lagos state, in 2020 he sign to Debim Music Entertainment, he realese his single 
+    in april 2020 title "my love" which makes him get more fame, currently he has one music album which contains 
+    17 music. he is very young and talented. i hope you will enjoy his music playlist, download his music and kindly rate him.
+  </p>
+   <p>Latest Hit From Smit Nico </p>
+   <div class="player">
+    <p class="sky-d-p">More Music From RIDWAN</p>
+    <ul id="playlist">
+      <li data-src="davidoftkante.mp3.mp3">Davido ft fave-kante</li>
+      <audio id="audio" controls>
+        <source src="davidoftkante.mp3.mp3" type="audio/mp3" />
+        Your browser does not support the audio element.
+      </audio><br>
+      <center><a class="download" href="path-to-your-music/davidoftkante.mp3.mp3" download>Download</a></center><br>
+
+      <li data-src="Black-Sherif-Kwaku-The-Traveller.mp3">black sheriff</li>
+    <audio id="audio" controls>
+      <source src="Black-Sherif-Kwaku-The-Traveller.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+    <center><a class="download" href="path-to-your-music/davidoftkante.mp3.mp3" download>Download</a></center><br>
+    
+
+    <li data-src="Black-Sherif-Kwaku-The-Traveller.mp3">black sheriff</li>
+    </ul>
+    <audio id="audio" controls>
+      <source src="Black-Sherif-Kwaku-The-Traveller.mp3" type="audio/mp3" />
+      Your browser does not support the audio element.
+    </audio>
+    <center><a class="download" href="path-to-your-music/davidoftkante.mp3.mp3" download>Download</a></center><br>
+    
+  </div>
+  <center><p class="copyright"><img src="copyright.png" width="13px"> Noble Studio 2025, All Right Reserve.</p></center>
+ <center> <p class="tagline">Web Develop By <a href="https://noblestudio.netlify.com">Noble Studio Nigeria</a></p></center>
+  <script src="player.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("service-worker.js");
+      });
+    }
+
+    const audio = document.getElementById("audio");
+const playlistItems = document.querySelectorAll("#playlist li");
+
+playlistItems.forEach(item => {
+  item.addEventListener("click", () => {
+    const src = item.getAttribute("data-src");
+    audio.src = src;
+    audio.play();
+  });
+});
+
+document.getElementById("toggle-theme").addEventListener("click", () => {
+  document.body.classList.toggle("light-mode");
+});
+  </script>
+</body>
+</html>
